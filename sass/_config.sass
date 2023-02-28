@@ -1,0 +1,58 @@
+// USER VARIABLES SECTION
+$accent: #D4B098
+$accent-dark: #444240
+
+$text-color: #1B1A17
+$text-nav: #555248
+$text-white: #fff
+
+$bg-color: #FDFDFB
+
+$font-size: 1.6rem // Body Font Size
+$font-text: roboto, sans-serif
+$font-title: playfair, sans-serif
+$font-prata: prata, sans-serif
+$fontIcon: icomoon // иконочный шрифт, сделан из иконок используемых в макете
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('playfair', normal, 400, '../fonts/playfair/PlayfairDisplay-Regular.woff2')
+@include font('playfair', normal, 700, '../fonts/playfair/PlayfairDisplay-Bold.woff2')
+
+@include font('prata', normal, 400, '../fonts/prata/Prata-Regular.ttf')
+
+@include font('roboto', normal, 400, '../fonts/roboto/Roboto-Regular.woff2')
+@include font('roboto', normal, 300, '../fonts/roboto/Roboto-Light.woff2')
+@include font('roboto', normal, 500, '../fonts/roboto/Roboto-Medium.woff2')
+@include font('roboto', normal, 700, '../fonts/roboto/Roboto-Bold.woff2')
+
+// GENERAL DOCUMENT STYLES
+*
+	box-sizing: border-box
+
+html, body
+	overflow-x: hidden
+html
+	font-size: calc(100vw/1360*10)
+body
+	font-family: $font-text
+	font-size: $font-size
+	color: $text-color
+	background-color: $bg-color
+	min-width: 32rem
+	position: relative
+	margin: 0
+
+a
+	color: $text-color
+	text-decoration: none
+
+h1, h2, h3, h4, h5, p
+	margin: 0

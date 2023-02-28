@@ -1,0 +1,495 @@
+@import config
+
+a.btn, button.btn
+	display: block
+	padding: 2.8rem 3.8rem
+	font-size: 1.2rem
+	font-weight: 500
+	color: $text-white
+	text-transform: uppercase
+	background-color: $accent-dark
+	border: 1px solid $accent-dark
+	transition: background .3s linear, color .3s linear
+	&:hover
+		color: darken($text-nav, 20%)
+		background-color: lighten($accent-dark, 70%)
+	&_white
+		background-color: $accent
+		color: $text-white
+		border-color: $accent
+		&:hover
+			color: $accent
+.title
+	font-size: 3.2rem
+	font-weight: 400
+	font-family: $font-title
+
+.logo
+	padding-left: 1.92rem
+	font-size: 1.4rem
+	font-family: $font-title
+	letter-spacing: .14em
+	text-transform: uppercase
+	position: relative
+	&::before
+		content: ''
+		display: block
+		width: 1.92rem
+		height: 1.92rem
+		background-image: url(../images/logo.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		position: absolute
+		top: calc(50% - .95rem)
+		left: 0
+	&_white
+		color: $text-white
+		&::before
+			background-image: url(../images/logo-w.svg)
+
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	height: 10rem
+	padding: 0 10rem
+	&__logo
+		font-size: 1.2rem
+		color: $text-nav
+
+.nav
+	display: flex
+	justify-content: center
+	align-items: center
+	&__link
+		font-size: 1.4rem
+		color: $text-nav
+		padding: 2rem 3.25rem
+		transition: background-color .3s linear, color .3s linear
+		&:hover
+			color: $accent
+			background-color: lighten($text-nav, 60%)
+
+.tools
+	display: flex
+	gap: 2.5rem
+	list-style: none
+	margin: 0
+	padding: 0
+	&__item
+		font-size: 1.6rem
+	&__heart
+		display: block
+		width: 1.8rem
+		height: 1.8rem
+		background-image: url(../images/icons/heart.svg)
+		background-size: contain
+		background-repeat: no-repeat
+		position: relative
+		&::before
+			content: '1'
+			display: flex
+			justify-content: center
+			align-items: center
+
+			width: 1.3rem
+			height: 1.3rem
+			font-size: .8rem
+			background-color: $accent
+			border-radius: 100%
+
+			position: absolute
+			top: -0.5rem
+			right: -0.8rem
+
+.top
+	display: flex
+	align-items: center
+	height: 75rem
+	width: 100%
+	padding: 0 12rem
+	position: relative
+	overflow: hidden
+	&::before, &::after
+		content: ''
+		display: block
+		width: 94.4rem
+		height: 94.4rem
+		border-radius: 100%
+		background: linear-gradient(180deg, rgba(234, 227, 212, 0) 0%, #EAE3D4 100%)
+
+		position: absolute
+		top: -10rem
+		right: -6rem
+		z-index: 1
+	&::after
+		background: linear-gradient(90deg, transparent 0%, transparent 50%, $bg-color 51%, $bg-color 100%)
+		z-index: 2
+	&__left
+		display: flex
+		flex-direction: column
+		align-items: start
+		min-width: 41rem
+		padding-left: 7.2rem
+		z-index: 10
+	&__title
+		margin-bottom: 3.9rem
+		font-size: 4.5rem
+		font-family: $font-title
+		font-weight: 400
+		position: relative
+		& span
+			display: block
+			font-size: .666em
+		&::after
+			content: ''
+			width: 5rem
+			height: .1rem
+			background-color: $text-color
+			position: absolute
+			top: calc(50% - 1.5rem)
+			left: -6.5rem
+	&__text
+		max-width: 26rem
+		margin-bottom: 6.4rem
+		font-size: 1.4rem
+		font-weight: 300
+		line-height: 2.1rem
+		color: rgba($text-color, .82)
+
+	&__right
+		flex-grow: 1
+		height: 100%
+		overflow: hidden
+		position: relative
+	&__img
+		display: flex
+		justify-content: center
+		height: 100%
+		img
+			height: 100%
+			object-fit: contain
+			z-index: 10
+	&__price, &__diametr
+		font-family: $font-prata
+		font-size: 1.6rem
+		z-index: 10
+		position: absolute
+		&::before
+			content: ''
+			width: 5rem
+			height: .1rem
+			background-color: $text-color
+			position: absolute
+			top: calc(50% - .25rem)
+			right: 0
+	&__price
+		top: 11rem
+		left: 8rem
+		padding-right: 6rem
+	&__diametr
+		bottom: 13rem
+		right: 4rem
+		padding-left: 6rem
+		&::before
+			right: auto
+			left: 0
+.bg-white
+	background-color: #fff
+
+.models
+	max-width: 117rem
+	padding: 8.5rem 0
+	margin: 0 auto
+	position: relative
+	&__title
+		width: 100%
+		height: 100%
+		padding-bottom: 1.5rem
+		margin-bottom: 3.7rem
+		position: relative
+	&__link
+		padding-bottom: 1.1rem
+		font-size: 1.6rem
+		font-weight: 500
+		color: $accent-dark
+		border-bottom: 1px solid #C4C0B6
+
+		position: absolute
+		bottom: 0
+		right: 0
+		transition: color .3s linear
+		&:hover
+			color: darken($accent, 35%)
+	.title
+		text-align: center
+
+.cards
+	display: flex
+	justify-content: space-between
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: flex-start
+		height: 46rem
+		width: 37rem
+		padding: 4rem
+		background-color: $bg-color
+	&__title
+		font-size: 1.4rem
+		font-weight: 700
+		font-family: $font-title
+		line-height: 2.4rem
+		text-transform: uppercase
+		& span
+			display: block
+			font-size: .86em
+			font-weight: 400
+			font-family: $font-prata
+	&__img
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		position: relative
+		& img
+			height: 90%
+			object-fit: contain
+			z-index: 10
+		&::before, &::after
+			content: ''
+			border-radius: 100%
+			position: absolute
+			z-index: 1
+		&::before
+			width: 99%
+			height: 99%
+			border: 1px solid #E2D0C4
+		&::after
+			width: 102%
+			height: 102%
+			background: linear-gradient(290deg, transparent 0%, $bg-color 70%, $bg-color 100%)
+			z-index: 2
+	&__more
+		position: relative
+		padding-top: 1.9rem
+		padding-left: 4.8rem
+		font-size: 1.6rem
+		&::before
+			content: ''
+			display: block
+			height: 1px
+			width: 3rem
+			background-color: $text-color
+
+			transition: transform .3s linear
+			position: absolute
+			bottom: .9rem
+			left: 0
+		&:hover::before
+			transform: translateX(1.1rem)
+
+.bg
+	overflow: hidden
+	position: relative
+	&::after, &::before
+		content: ''
+		display: block
+		border-radius: 100%
+		border: 1px solid $accent
+		position: absolute
+		pointer-events: none
+	&::before
+		width: 36rem
+		height: 36rem
+		top: -13rem
+		right: -18rem
+	&::after
+		width: 74.4rem
+		height: 74.4rem
+		top: 2rem
+		right: -57rem
+
+.quality
+	max-width: 96.7rem
+	height: 52rem
+	margin: 0 auto
+	display: flex
+	position: relative
+	&::after
+		content: ''
+		display: block
+		width: 51.9rem
+		height: 100%
+		position: absolute
+		top: 0
+		right: calc(100% - 33rem)
+		background-color: #F7F5EF
+	&__slider
+		flex-basis: 60%
+		height: 100%
+	&__content
+		flex-basis: 50%
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		justify-content: center
+		padding-left: 6.85rem
+		position: relative
+		& .title
+			margin-bottom: 3.8rem
+	&__text
+		margin-bottom: 4.5rem
+		color: $accent-dark
+		line-height: 1.5
+
+.slider
+	padding: 5.2rem 0
+	position: relative
+	&__item img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__arr
+		width: .6rem
+		height: 1.1rem
+		position: absolute
+		top: auto
+		left: auto
+		bottom: 1.7rem
+		right: 11.6rem
+		&::after
+			font-size: 1rem
+			color: $text-color
+			transition: transform .3s linear, color .3s linear
+		&:hover::after
+			transform: scale(1.6)
+			color: $accent
+		&_next
+			right: 5.6rem
+	&__pagination 
+		& .swiper-pagination-bullet
+			background-color: transparent
+			opacity: 0
+			&-active
+				opacity: 1
+		& span
+			font-size: 1.2rem
+			color: $text-color
+			font-family: $font-prata
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+	width: 5.3rem !important
+	left: auto
+	bottom: 1.8rem
+	right: 3.8rem
+
+.news
+	display: flex
+	width: 117.1rem
+	padding: 8.1rem 0 9rem
+	margin: 0 auto
+	&__content
+		flex-basis: 47%
+		padding-right: 7.1rem
+		display: flex
+		flex-direction: column
+		justify-content: center
+		gap: 4rem
+		position: relative
+	&__text
+		max-width: 37.6rem
+		line-height: 2.7rem
+		color: $accent-dark
+	&__link
+		color: #262421
+		font-weight: 700
+		transition: color .2s ease
+		&:hover
+			color: $accent
+	&__gallery
+		flex-basis: 53%
+	&__social
+		position: absolute
+		bottom: 6.2rem
+		left: 0
+
+.social
+	display: flex
+	gap: 1.8rem
+	list-style-type: none
+	margin: 0
+	padding: 0
+	&__item
+		font-size: 2.4rem
+	&__link
+		&:hover i::before
+			color: $accent
+		& i::before
+			transition: color .3s ease
+
+.gallery
+	max-height: 46rem
+	display: grid
+	grid-template-columns: repeat(5, 1fr)
+	grid-template-rows: 1fr 1fr
+	gap: 1rem
+	&__item
+		&:nth-child(1)
+			grid-column: 1 / span 2
+			grid-row: 1 / 2
+		&:nth-child(2)
+			grid-column: 1 / span 2
+			grid-row: 2 / 3
+		&:nth-child(3)
+			grid-column: 3 / span 3
+			grid-row: 1 / span 2
+	&__img
+		object-fit: cover
+		width: 100%
+		height: 100%
+
+.footer
+	width: 100%
+	padding: 7.9rem 0 6.7rem
+	background-color: $accent-dark
+	&__content
+		display: flex
+		justify-content: space-between
+		align-items: center
+		align-items: flex-start
+		max-width: 100.1rem
+		margin: 0 auto
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 1.5rem
+	&__logo
+		margin-bottom: 1.8rem
+		padding-left: 2.5rem
+		font-size: 1.4rem
+		font-weight: 700
+		position: relative
+		&::before
+			top: auto
+			bottom: 0
+
+	&__title
+		margin-bottom: 1.8rem
+		font-size: 1.4rem
+		font-weight: 700
+		letter-spacing: .07em
+		color: $text-white
+		text-transform: uppercase
+	&__link
+		color: rgba($text-white, .75)
+		font-size: 1.2rem
+	&__title, &__link
+		transition: color .2s ease
+		&:hover
+			color: $accent
+@import media

@@ -1,0 +1,217 @@
+@import config
+
+@media only screen  and (max-width : 1050px)
+	body
+		font-size: 1.7rem
+	.header__logo
+		font-size: 1.3rem
+	.nav__link
+		font-size: 1.6rem
+	.tools__item
+		font-size: 1.8rem
+	.tools__heart
+		width: 2rem
+		height: 2rem
+		&::before
+			width: 1.5rem
+			height: 1.5rem
+			font-size: 1rem
+	.top__text
+		font-size: 1.6rem
+	.cards
+		&__item
+			height: 40rem
+		&__title
+			font-size: 1.6rem
+		&__more
+			font-size: 1.7rem
+
+	.footer__logo, .footer__title
+		font-size: 1.6rem
+	.footer__link
+		font-size: 1.4rem
+
+@media only screen  and (max-width : 700px)
+	html
+		font-size: calc(100vw/650*10)
+	body
+		font-size: 1.8rem
+	.title
+		font-size: 4.6rem
+	.logo
+		font-size: 1.8rem
+		padding-left: 2.3rem
+		&::before
+			width: 2.3rem
+			height: 2.3rem
+			top: calc(50% - 1.1rem)
+	.header
+		height: 16rem
+		padding: 2rem
+		flex-wrap: wrap
+		&__nav
+			width: 100%
+			order: 1
+	.nav__link
+		padding: 1rem 1.5rem
+		font-size: 1.8rem
+	.tools
+		&__item
+			font-size: 2.2rem
+		&__heart
+			width: 2.4rem
+			height: 2.4rem
+	.top
+		flex-direction: column-reverse
+		gap: 5rem
+		padding: 0 2rem
+		overflow: hidden
+		&::before, &::after
+			width: 55rem
+			height: 55rem
+			top: -17rem
+			right: 7.6rem
+			transform: rotate(-10deg)
+		&__left
+			min-width: 80%
+		&__title
+			font-size: 5.5rem
+		&__text
+			max-width: 40rem
+			margin-bottom: 2.8rem
+			font-size: 2rem
+			line-height: 1.8
+		& .btn
+			width: 80%
+			text-align: center
+		&__right
+			width: 100%
+		&__price
+			top: 5rem
+			left: 8rem
+		&__diametr
+			bottom: 6rem
+			right: 4rem
+
+	.models
+		max-width: 100%
+		padding: 6rem 2rem
+		&__link
+			padding-bottom: .7rem
+			right: 2rem
+			bottom: auto
+			top: 6.5rem
+
+	.cards
+		flex-direction: column
+		align-items: center
+		gap: 3rem
+
+		&__item
+			padding: 2rem 6rem
+			height: 50rem
+			width: 49rem
+			background-color: rgba($accent, .3)
+		&__img
+			&::before
+				display: none
+		&__title
+			font-size: 2rem
+		&__more
+			font-size: 2.1rem
+
+	.quality
+		flex-direction: column-reverse
+		max-width: 100%
+		padding: 4rem 2rem 0
+		height: auto
+		&::after
+			display: none
+		&__slider
+			padding: 5rem
+			flex-basis: 50rem
+			width: 100%
+		&__text
+			max-width: 78%
+		& .btn
+			width: 78%
+			text-align: center
+
+	.news
+		width: 100%
+		padding: 5rem 2rem
+		flex-direction: column
+		gap: 4rem
+		&__content
+			padding: 0 4rem
+		&__text
+			max-width: 50rem
+		&__social
+			position: relative
+			bottom: auto
+			left: auto
+
+	.footer
+		padding: 4rem 2rem
+		&__content
+			padding: 0 2rem
+			justify-content: space-between
+			flex-wrap: wrap
+		&__item
+			flex-basis: 30%
+
+@media only screen  and (max-width : 420px)
+	html
+		font-size: 7.5px
+	.title
+		font-size: 4.2rem
+	.top
+		&::before, &::after
+			width: 45rem
+			height: 45rem
+			top: -5rem
+			right: 3.6rem
+			transform: rotate(-10deg)
+		&__price, &__diametr
+			&::before
+				width: 3rem
+		&__price
+			padding-right: 4rem
+			top: 3rem
+			left: 4.5rem
+		&__diametr
+			padding-left: 4rem
+			bottom: 4rem
+			right: .5rem
+		&__title
+			font-size: 4.7rem
+	.cards
+		&__item
+			height: 48rem
+			width: 47rem
+		&__img img
+			width: 70%
+			height: 70%
+	.quality
+		&__content
+			padding-left: 4rem
+		&__slider
+			padding: 4rem 2rem
+	.footer
+		&__content
+			gap: 2rem
+		&__item
+			flex-basis: 40%
+		&__logo, &__title
+			margin-top: 1.5rem
+			margin-bottom: .5rem
+
+@media only screen  and (max-width : 360px)
+	html
+		font-size: 7px
+@media only screen  and (max-width : 340px)
+	html
+		font-size: 6px
+
+
+
