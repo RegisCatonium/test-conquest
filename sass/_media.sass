@@ -159,7 +159,18 @@
 			flex-wrap: wrap
 		&__item
 			flex-basis: 30%
-
+@media only screen  and (max-width : 520px)
+	.cards
+		&__item
+			height: 48rem
+			width: 47rem
+		&__img
+			width: 85%
+			height: 75%
+			align-self: center
+			img
+				width: 60%
+				height: 70%
 @media only screen  and (max-width : 420px)
 	html
 		font-size: 7.5px
@@ -185,13 +196,13 @@
 			right: .5rem
 		&__title
 			font-size: 4.7rem
-	.cards
-		&__item
-			height: 48rem
-			width: 47rem
-		&__img img
-			width: 70%
-			height: 70%
+	// .cards
+	// 	&__item
+	// 		height: 48rem
+	// 		width: 47rem
+	// 	&__img img
+	// 		width: 70%
+	// 		height: 70%
 	.quality
 		&__content
 			padding-left: 4rem
